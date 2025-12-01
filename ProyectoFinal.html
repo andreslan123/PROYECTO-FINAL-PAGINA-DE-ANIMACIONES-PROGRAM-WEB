@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Proyecto Final Program Web</title>
+    <title>Eyes in Blender</title>
     <link rel="stylesheet" href="Estilos.css" />
 </head>
 <body>
@@ -15,7 +15,7 @@
 
         <!-- Navegación principal -->
         <nav>
-            <ul class="nav-links">
+            <ul class="moversePorLaPagina">
                 <li><a href="ProyectoFinal.html">Inicio</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#servicios">Servicios</a></li>
@@ -47,7 +47,7 @@
                 </nav>
                 <aside class="info" aria-label="Información adicional">
                     <div class="calificacion">
-                        <span>⭐ 5.0 Calificación</span>
+                        <span>5.0 Calificación</span>
                         <span>200+ Clientes Felices</span>
                         <span>500+ Proyectos</span>
                     </div>
@@ -61,7 +61,7 @@
         <!-- Galería de diseños 3D -->
         <section class="diseños3D" id="galeria" aria-labelledby="galeria-title">
             <header class="img3D">
-                <h2 id="galeria-title">Galería de Diseños 3D</h2>
+                <h2 id="galeria">Galería de Diseños 3D</h2>
                 <p>
                     Explora nuestra colección de diseños 3D creados con Blender. Desde arquitectura hasta
                     personas, cada proyecto cuenta una historia única.
@@ -113,105 +113,94 @@
                 <!-- Cada servicio como article para contenido independiente -->
 
                 <!-- MODELOS 3D -->
-                <article class="card" id="Modelos3D">
-                    <div class="card-icon">
-                        <i class="fas_fa-cube"></i> <!-- icono de 3D -->
-                    </div>
+                <article class="Modelos3D" id="Modelos3D">
                     <h3>Modelado 3D</h3>
                     <p>Creación de modelos 3D detallados y realistas para cualquier proyecto.</p>
                     <ul>
+                        <img src="modelado3D/modelos3D.jpg" alt="modelado3D" width="150" height="150" />
                         <li>Modelos orgánicos</li>
                         <li>Modelos hard-surface</li>
                         <li>Retopología</li>
                         <li>Optimización de mallas</li>
+                        
                     </ul>
                     <p class="precio">Desde 350 bs</p>
-                    <a href="#" class="btn">Solicitar Servicio →</a>
+                    <a href="servicioModelos3D.html" class="btn" id="servicioModelos3D">Solicitar Servicio →</a>
                 </article>
                 
                 <!--  Texturizado y Materiales-->
-                <article class="card" id="TexturziadoMateriales">
-                    <div class="card-icon">
-                        <i class="fas_fas-paint-brush"></i>
-                    </div>
+                <article class="TexturziadoMateriales" id="TexturziadoMateriales">
                     <h3>Texturizado y Materiales</h3>
                     <p>Aplicación de texturas y materiales PBR para lograr realismos impresionantes</p>
                     <ul>
+                        <img src="modelado3D/texturizado.jpg" alt="Diseño Abstracto" width="150" height="150" />
                         <li>Materiales PBR</li>
                         <li>Textura 4K</li>
                         <li>Mapas de normales</li>
                         <li>Shaders personalizados</li>
                     </ul>
                     <p class="precio">Desde 200 bs</p>
-                    <a href="#" class="btn">Solicitar Servicio</a>
+                    <a href="servicioTexturizadoMaterial.html" class="btn">Solicitar Servicio</a>
                 </article>
                 
                 <!--  Iluminación y Renderizado-->
-                <article class="card" id="IluminacionRenderizado">
-                    <div class="card-icon">
-                        <i class="fas_fas-paint-brush"></i>
-                    </div>
+                <article class="IluminacionRenderizado" id="IluminacionRenderizado">
                     <h3>Iluminación y Renderizado</h3>
                     <p>Configuración profesional de luces y renderizado de alta calidad</p>
                     <ul>
+                        <img src="modelado3D/render.jpg" alt="Diseño Abstracto" width="150" height="150" />
                         <li>Cycles & Eevee</li>
                         <li>HDRI lighting</li>
                         <li>Compositing</li>
                         <li>Post-procesamiento</li>
                     </ul>
                     <p class="precio">Desde 200 bs</p>
-                    <a href="#" class="btn">Solicitar Servicio</a>
+                    <a href="servicioIluminacion.html" class="btn">Solicitar Servicio</a>
                 </article>
 
                 <!-- ANIMACION 3D -->
-                <article class="card" id="Animacion3D">
-                    <div class="card-icon">
-                        <i class="fas_fas-paint-brush"></i>
-                    </div>
+                <article class="animacion3D" id="Animacion3D">
                     <h3>Animación 3D</h3>
                     <p>Animaciones fluidas y expresivas dan vida a tus personajes y objetos.</p>
                     <ul>
+                        <img src="modelado3D/animacion3D.jpg" alt="Diseño Abstracto" width="150" height="150" />
                         <li>Rigging avanzado</li>
                         <li>Animación de personajes</li>
                         <li>Motion graphics</li>
                         <li>Simulaciones</li>
                     </ul>
                     <p class="precio">Desde 200 bs</p>
-                    <a href="#" class="btn">Solicitar Servicio</a>
+                    <a href="servicioAnimacion.html" class="btn">Solicitar Servicio</a>
                 </article>
 
                 <!--  Visualización Arquitectónica -->
-                <article class="card" id="VisualizacionArquitectonica">
-                    <div class="card-icon">
-                        <i class="fas_fas-paint-brush"></i>
-                    </div>
+                <article class="VisualizacionArquitectonica" id="VisualizacionArquitectonica">
                     <h3>Visualización Arquitectónica</h3>
                     <p>Renders fotorrealistas para proyectos arquitectónicos e interiorismo.</p>
                     <ul>
+                        <img src="modelado3D/arquitectura.jpg" alt="Diseño Abstracto" width="150" height="150" />
                         <li>Renders exteriores</li>
                         <li>Renders interiores</li>
                         <li>Recorridos virtuales</li>
                         <li>Plantas 3D</li>
                     </ul>
                     <p class="precio">Desde 200 bs</p>
-                    <a href="#" class="btn">Solicitar Servicio</a>
+                    <a href="servicioVisualizacion.html" class="btn">Solicitar Servicio</a>
                 </article>
 
                 <!-- Producción Audiovisual -->
-                <article class="card" id="ProduccionAudiovisual">
-                    <div class="card-icon">
-                        <i class="fas_fas-paint-brush"></i>
-                    </div>
+                <article class="ProduccionAudioVisual" id="ProduccionAudiovisual">
                     <h3>Producción Audiovisual</h3>
                     <p>Elementos 3D para spots publicitarios, videos musicales y cortometrajes.</p>
                     <ul>
+                        <img src="modelado3D/ProduccionAudioVisual.jpg" alt="Diseño Abstracto" width="150" height="150" />
                         <li>Motion graphics</li>
                         <li>VFX integration</li>
                         <li>Tracking 3D</li>
                         <li>Compositing avanzado</li>
                     </ul>
                     <p class="precio">Desde 200 bs</p>
-                    <a href="#" class="btn">Solicitar Servicio</a>
+                    <a href="servicioProduccion.html" class="btn">Solicitar Servicio</a>
                 </article>
             </section>
         </section>
