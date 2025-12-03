@@ -1,9 +1,522 @@
-body{
+/* ============ Estilo general =========== */
+body {
     background-color: #080D14;
-    margin: 8;
+    margin: 5;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-left: 170px;
-    padding-right: 170px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
 
+/* =========== Estilo de la barra de navegación y logo ============*/
+header {
+    background-color: #1D1F34;
+    padding: 20px 40px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ============ Barra de navegación ============== */
+nav ul.moversePorLaPagina {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul.moversePorLaPagina li {
+    margin-right: 30px;
+}
+
+nav ul.moversePorLaPagina li a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul.moversePorLaPagina li a:hover {
+    color: #7a5fff;
+    border-bottom: 2px solid #7a5fff;
+}
+
+/* Estilo de los botones */
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    padding: 12px 25px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.presupuesto {
+    background-color: #6f42c1; 
+}
+
+.comenzar {
+    background-color: #007bff;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul.moversePorLaPagina {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul.moversePorLaPagina li {
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+/* ==========================  Sección principal =============================*/
+.presentacion {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.contenido {
+    max-width: 50%;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.resaltado {
+    color: #00B28A;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.botones {
+    display: flex;
+    gap: 15px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #023b29;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #023b29;
+}
+
+/* Estilo para la imagen */
+.imagen img {
+    width: 500px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Fondo de la imagen */
+.imagen {
+    position: relative;
+    overflow: hidden;
+    max-width: 45%;
+}
+
+.imagen::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* ============================ Estilos para la galería 3D ============================ */
+.diseños3D {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.img3D h2 {
+    font-size: 2rem;
+    color: #00B28A;
+}
+
+.img3D p {
+    color: white;
+    margin-top: 10px;
+}
+
+/* Botones de filtro */
+.botonesTipoDiseños {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.botonesTipoDiseños .button {
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botonesTipoDiseños .button:hover{
+    background-color: #2c3e50;
+    color: #fff;
+}
+.botonesTipoDiseños .button.active {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+/* Diseño de las imágenes de muestra */
+.imagenesMuestra {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.imagen {
+    text-align: center;
+}
+
+.imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imagen p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Paginación */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.paginacion a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.paginacion a:hover {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.paginacion .active {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Estilo general para footer */
+footer {
+    text-align: center;
+    background-color: #1D1F34;
+    padding: 15px;
+    color: #00B28A;
+}
+
+/* ===================== Estilo de la sección de servicios =========================== */
+#servicios-title{
+    color: #00B28A
+}
+.TiposServicios {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.TiposServicios header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.TiposServicios header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Diseño de los servicios */
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 columnas */
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Cada servicio como una tarjeta */
+.servicio {
+    background-color: #13202c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+}
+
+.servicio img.icono-servicio {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.servicio h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.servicio ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.servicio ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.servicio .precio {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.servicio .btn {
+    padding: 10px 20px;
+    background-color: #7a5fff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.servicio .btn:hover {
+    background-color: #6f42c1;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .servicios {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .servicios {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+}
+
+/* Sección de contacto */
+.contenedorContactos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 40px;
+    background-color: #1D1F34;
+}
+
+.contactoEyesBlender h3 {
+    font-size: 1.6rem;
+    color: #7a5fff;
+    margin-bottom: 10px;
+}
+
+.contactoEyesBlender p {
+    font-size: 1rem;
+    color: #f4f4f4;
+    margin-bottom: 15px;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-icon {
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #3498db;
+}
+
+.social-icon:hover {
+    text-decoration: underline;
+}
+
+/* Sección de servicios */
+.contactoServicios h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #7a5fff;
+}
+
+.servicios-links {
+    list-style: none;
+}
+
+.servicios-links li {
+    margin-bottom: 10px;
+}
+
+.servicios-links a {
+    text-decoration: none;
+    color: #f4f4f4;
+    transition: color 0.3s ease;
+}
+
+.servicios-links a:hover {
+    color: #7a5fff;
+}
+
+/* Sección de empresa */
+.contacto h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #7a5fff;
+}
+
+.empresa-links {
+    list-style: none;
+}
+
+.empresa-links li {
+    margin-bottom: 10px;
+}
+
+.empresa-links a {
+    text-decoration: none;
+    color: #f4f4f4;
+    transition: color 0.3s ease;
+}
+
+.empresa-links a:hover {
+    color: #7a5fff;
+}
+
+/* Sección de contacto */
+.contactos {
+    list-style: none;
+}
+
+.contactos li {
+    margin-bottom: 10px;
+}
+
+.contactos a {
+    text-decoration: none;
+    color: #7a5fff;
+}
+
+.contactos a:hover {
+    text-decoration: underline;
+}
+
+/* Sección de newsletter */
+.newsletter h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #7a5fff;
+}
+
+.newsletter p {
+    color: #f4f4f4;
+    margin-bottom: 15px;
+}
+
+.suscripcion {
+    display: flex;
+    gap: 10px;
+}
+
+.suscripcion input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+}
+
+.suscripcion button {
+    background-color: #7a5fff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.suscripcion button:hover {
+    background-color: #6f42c1;
 }
