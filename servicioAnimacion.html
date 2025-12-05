@@ -1,26 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANIMACION 3D</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eyes in Blender | Expertos en Diseño 3D</title>
+    <link rel="stylesheet" href="EstiloAnimacion3D.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <section class="gallery">
+    <!-- parte de arriba -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="Logos/Eyes_in_Blender-removebg-preview.png" alt="Logo de Eyes in Blender" />
+            </div>
 
-    <article class="card">
-        <figure class="card-image"></figure>
-        <header class="card-body">
-            <span class="tag"></span>
-            <h3 class="title" aria-hidden="true"></h3>
+            <button class="menu-hamburguesa" aria-label="Abrir menú de navegación">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="nav-menu">
+                <ul class="moversePorLaPagina">
+                    <li><a href="ProyectoFinal.html">Inicio</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="Contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="buttons">
+                <a href="#" class="button presupuesto">Presupuesto</a>
+                <a href="#" class="button comenzar">Comenzar</a>
+            </div>
+        </div>
+    </header>
+  
+     <!-- parte de servicios -->
+    <section class="TiposServicios" id="servicios" aria-labelledby="servicios-title">
+        <header>
+            <h2 id="servicios-title">Animaciones 3D</h2>
         </header>
-        <footer class="card-footer">
-            <span class="likes"></span>
-            <span class="views"></span>
-        </footer>
-    </article>
 
-</section>
+        <section class="servicios" aria-label="Listado de servicios">
+            <article class="servicio">
+                <img src="modelado3D/modelos3D.jpg" alt="Modelado 3D" class="icono-servicio" />
+                <h3>Modelado 3D</h3>
+                <p>Creación de modelos 3D detallados y realistas para cualquier proyecto.</p>
+                <ul>
+                    <li>Modelos orgánicos</li>
+                    <li>Modelos hard-surface</li>
+                    <li>Retopología</li>
+                    <li>Optimización de mallas</li>
+                </ul>
+                <p class="precio">Desde 350 bs</p>
+                <a href="servicioModelos3D.html" class="btn">Solicitar Servicio →</a>
+            </article>
 
+            <article class="servicio">
+                <img src="modelado3D/texturizado.jpg" alt="Texturizado y Materiales" class="icono-servicio" />
+                <h3>Texturizado y Materiales</h3>
+                <p>Aplicación de texturas y materiales PBR para lograr realismos impresionantes.</p>
+                <ul>
+                    <li>Materiales PBR</li>
+                    <li>Texturas 4K</li>
+                    <li>Mapas de normales</li>
+                    <li>Shaders personalizados</li>
+                </ul>
+                <p class="precio">Desde 200 bs</p>
+                <a href="servicioTexturizadoMaterial.html" class="btn">Solicitar Servicio →</a>
+            </article>
+
+            <article class="servicio">
+                <img src="modelado3D/render.jpg" alt="Iluminación y Renderizado" class="icono-servicio" />
+                <h3>Iluminación y Renderizado</h3>
+                <p>Configuración profesional de luces y renderizado de alta calidad.</p>
+                <ul>
+                    <li>Cycles & Eevee</li>
+                    <li>HDRI lighting</li>
+                    <li>Compositing</li>
+                    <li>Post-procesamiento</li>
+                </ul>
+                <p class="precio">Desde 200 bs</p>
+                <a href="servicioIluminacion.html" class="btn">Solicitar Servicio →</a>
+            </article>
+
+            <article class="servicio">
+                <img src="modelado3D/animacion3D.jpg" alt="Animación 3D" class="icono-servicio" />
+                <h3>Animación 3D</h3>
+                <p>Animaciones fluidas y expresivas que dan vida a tus personajes y objetos.</p>
+                <ul>
+                    <li>Rigging avanzado</li>
+                    <li>Animación de personajes</li>
+                    <li>Motion graphics</li>
+                    <li>Simulaciones</li>
+                </ul>
+                <p class="precio">Desde 300 bs</p>
+                <a href="servicioAnimacion.html" class="btn">Solicitar Servicio →</a>
+            </article>
+
+            <article class="servicio">
+                <img src="modelado3D/arquitectura.jpg" alt="Visualización Arquitectónica" class="icono-servicio" />
+                <h3>Visualización Arquitectónica</h3>
+                <p>Renders fotorrealistas para proyectos arquitectónicos e interiorismo.</p>
+                <ul>
+                    <li>Renders exteriores</li>
+                    <li>Renders interiores</li>
+                    <li>Recorridos virtuales</li>
+                    <li>Plantas 3D</li>
+                </ul>
+                <p class="precio">Desde 200 bs</p>
+                <a href="servicioVisualizacion.html" class="btn">Solicitar Servicio →</a>
+            </article>
+
+            <article class="servicio">
+                <img src="modelado3D/ProduccionAudioVisual.jpg" alt="Producción Audiovisual" class="icono-servicio" />
+                <h3>Producción Audiovisual</h3>
+                <p>Elementos 3D para spots publicitarios, videos musicales y cortometrajes.</p>
+                <ul>
+                    <li>Motion graphics</li>
+                    <li>VFX integration</li>
+                    <li>Tracking 3D</li>
+                    <li>Compositing avanzado</li>
+                </ul>
+                <p class="precio">Desde 500 bs</p>
+                <a href="servicioProduccion.html" class="btn">Solicitar Servicio →</a>
+            </article>
+        </section>
+    </section>
+
+    <hr>
+
+    <!-- Contactos -->
+    <aside class="info-adicional">
+        <div class="contenedorContactos">
+            <div class="contactoEyesBlender" id="contenedor1">
+                <h3>Eyes in Blender</h3>
+                <p>Especialistas en diseño 3D con Blender. Transformamos ideas en
+                    experiencias visuales impactantes para proyectos únicos.</p>
+            </div>
+            <div class="contactoServicios" id="contenedor2">
+                <h4>Nuestros Servicios</h4>
+                <ul class="servicios-links">
+                    <li><a href="#servicios">Modelado 3D</a></li>
+                    <li><a href="#servicios">Texturizado</a></li>
+                    <li><a href="#servicios">Renderizado</a></li>
+                    <li><a href="#servicios">Visualizacion</a></li>
+                    <li><a href="#servicios">VFX</a></li>
+                </ul>
+            </div>
+            <div class="contacto" id="contenedor3">
+                <h4>Contactos</h4>
+                <ul class="contactos">
+                    <li class="contactanos">andressanticla@gmail.com</li>
+                    <li class="contactanos">+591 69912569</li>
+                    <li class="contactanos">La Paz - Bolivia</li>
+                </ul>
+            </div>
+            <div class="newsletter" id="contenedor4">
+                <h4>Newsletter</h4>
+                <div class="suscripcion">
+                    <input type="email" name="tuEmail" id="tuEmail" placeholder="Tu Email">
+                    <button>Suscribir</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        <p>&copy; 2025 BlenderStudio. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.querySelector('.menu-hamburguesa');
+            const navMenu = document.getElementById('nav-menu');
+
+            menuButton.addEventListener('click', function () {
+                navMenu.classList.toggle('activo');
+                menuButton.classList.toggle('cruz');
+            });
+
+            // Opcional: Cerrar menú al hacer click en un enlace
+            const menuLinks = document.querySelectorAll('#nav-menu a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu.classList.contains('activo')) {
+                        navMenu.classList.remove('activo');
+                        menuButton.classList.remove('cruz');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

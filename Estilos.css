@@ -315,6 +315,7 @@ h1 {
     text-align: center;
     transition: transform 0.3s ease;
     border: 1px solid #1D1F34;
+    margin-top: 20px;
 }
 .servicio:hover {
     transform: translateY(-5px);
