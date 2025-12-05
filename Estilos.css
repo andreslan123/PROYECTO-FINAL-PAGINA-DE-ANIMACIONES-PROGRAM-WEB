@@ -1,125 +1,131 @@
 /* ============ Estilo general =========== */
 body {
     background-color: #080D14;
-    margin: 5;
+    /* Eliminado margin: 5; se usa padding en las secciones o contenedores */
     color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-left: 10px;
-    padding-right: 20px;
+    font-family: Arial, sans-serif; /* Usar una fuente web segura como Arial */
+    padding: 0; /* Asegurar que no haya padding en el body */
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Contenedor centralizado para el contenido */
+main, .diseños3D, .TiposServicios, .info-adicional {
+    max-width: 1200px; /* Ancho máximo para el contenido principal */
+    margin: 0 auto;
+    padding: 0 20px; /* Padding a los lados para evitar que el contenido toque los bordes */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* =========== Estilo de la barra de navegación y logo ============*/
 header {
     background-color: #1D1F34;
-    padding: 20px 40px;
+    padding: 20px 0; /* Padding vertical, el horizontal lo maneja header-container */
+    position: sticky; /* Sticky header para mejor usabilidad */
+    top: 0;
+    z-index: 1000;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 900px;
+    max-width: 1200px; /* Ajuste para coincidir con el body */
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .logo img {
-    max-width: 100%;
+    max-width: 150px; /* Tamaño más manejable para un logo */
     height: auto;
 }
 
 /* ============ Barra de navegación ============== */
 nav ul.moversePorLaPagina {
     display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul.moversePorLaPagina li {
-    margin-right: 30px;
+    gap: 30px; /* Usar gap en lugar de margin-right para mejor espaciado */
 }
 
 nav ul.moversePorLaPagina li a {
-    text-decoration: none;
     color: #f4f4f4;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px; /* Para que el borde no esté pegado al texto */
     border-bottom: 2px solid transparent;
 }
 
 nav ul.moversePorLaPagina li a:hover {
-    color: #7a5fff;
-    border-bottom: 2px solid #7a5fff;
+    color: #00B28A; /* Color de acento para hover */
+    border-bottom: 2px solid #00B28A;
 }
 
-/* Estilo de los botones */
+/* Estilo de los botones del header */
 .buttons {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .button {
-    padding: 12px 25px;
+    padding: 10px 20px;
     border-radius: 5px;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
     text-align: center;
     transition: background-color 0.3s ease;
+    white-space: nowrap; /* Evita que el texto del botón se rompa */
 }
 
 .presupuesto {
-    background-color: #6f42c1; 
+    background-color: #6f42c1; /* Púrpura */
 }
 
 .comenzar {
-    background-color: #007bff;
+    background-color: #00B28A; /* Verde de acento */
 }
 
 .button:hover {
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul.moversePorLaPagina {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul.moversePorLaPagina li {
-        margin-bottom: 15px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
+/* ========================== Menú de Hamburguesa =============================*/
+.menu-hamburguesa {
+    display: none; /* Ocultar por defecto en escritorio */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1001;
 }
 
-/* ==========================  Sección principal =============================*/
+
+/* ========================== Sección principal =============================*/
 .presentacion {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    gap: 40px;
+    padding: 60px 20px;
     align-items: center;
 }
 
 .contenido {
+    flex: 1; /* Ocupa el espacio disponible */
     max-width: 50%;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 3.5em; /* Aumentado ligeramente para impacto */
     margin-bottom: 20px;
 }
 
@@ -127,120 +133,130 @@ h1 {
     color: #00B28A;
 }
 
-p {
+.presentacion p { /* Especificidad para el párrafo de presentación */
     font-size: 1.2em;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .botones {
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
-.button {
-    padding: 10px 20px;
-    background-color: #023b29;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
+.botones .button.galeria {
+    background-color: #00B28A;
+}
+.botones .button.galeria:hover {
+    background-color: #009a7d;
 }
 
-.button:hover {
-    background-color: #023b29;
+.botones .button.presupuesto {
+    background-color: #6f42c1;
+}
+.botones .button.presupuesto:hover {
+    background-color: #5c35a8;
 }
 
-/* Estilo para la imagen */
-.imagen img {
-    width: 500px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.7);
+.info .calificacion span {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: bold;
+    color: #00B28A;
 }
 
-/* Fondo de la imagen */
+/* Estilo para la imagen principal */
 .imagen {
     position: relative;
     overflow: hidden;
-    max-width: 45%;
+    flex: 1; /* Ocupa el otro espacio */
+    max-width: 50%;
+}
+
+.imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.5); /* Sombra más oscura */
 }
 
 .imagen::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    /* Eliminado el overlay oscuro que cubría la imagen, ya que podría ocultar el detalle */
+    content: none; 
 }
 
 /* ============================ Estilos para la galería 3D ============================ */
 .diseños3D {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.img3D {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .img3D h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #00B28A;
+    margin-bottom: 10px;
 }
 
 .img3D p {
-    color: white;
-    margin-top: 10px;
+    color: #ccc;
 }
 
 /* Botones de filtro */
 .botonesTipoDiseños {
     display: flex;
+    flex-wrap: wrap; /* Para que se ajusten en móvil */
+    justify-content: center;
     gap: 10px;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .botonesTipoDiseños .button {
-    padding: 10px 20px;
-    background-color: #f4f4f4;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 8px 15px;
+    background-color: #333;
+    color: #f4f4f4;
+    border-radius: 20px; /* Botones más redondeados */
 }
 
-.botonesTipoDiseños .button:hover{
-    background-color: #2c3e50;
-    color: #fff;
-}
+.botonesTipoDiseños .button:hover,
 .botonesTipoDiseños .button.active {
-    background-color: #2c3e50;
+    background-color: #00B28A;
     color: #fff;
 }
 
 /* Diseño de las imágenes de muestra */
 .imagenesMuestra {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo con minmax */
     gap: 20px;
 }
 
-.imagen {
+.imagen-galeria { /* Nuevo nombre de clase para evitar conflicto */
     text-align: center;
-}
-
-.imagen img {
-    width: 100%;
-    height: auto;
+    background-color: #13202c;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.imagen p {
-    margin-top: 10px;
+.imagen-galeria img {
+    width: 100%;
+    height: 200px; /* Altura fija para uniformidad */
+    object-fit: cover; /* Asegura que la imagen cubra el área */
+    transition: transform 0.3s ease;
+}
+
+.imagen-galeria:hover img {
+    transform: scale(1.05);
+}
+
+.imagen-galeria p {
+    margin: 15px 0;
     font-weight: bold;
-    color: #333;
+    color: #fff;
 }
 
 /* Paginación */
@@ -248,275 +264,299 @@ p {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .paginacion a {
-    text-decoration: none;
-    color: #333;
+    color: #ccc;
     padding: 10px 15px;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.paginacion a:hover {
-    background-color: #2c3e50;
-    color: #fff;
-}
-
-.paginacion .active {
-    background-color: #3498db;
-    color: #fff;
-}
-
-/* Estilo general para footer */
-footer {
-    text-align: center;
     background-color: #1D1F34;
-    padding: 15px;
-    color: #00B28A;
+    border-radius: 5px;
+}
+
+.paginacion a:hover,
+.paginacion .active {
+    background-color: #00B28A;
+    color: #fff;
 }
 
 /* ===================== Estilo de la sección de servicios =========================== */
-#servicios-title{
-    color: #00B28A
-}
 .TiposServicios {
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
 .TiposServicios header h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    color: #00B28A;
+    margin-bottom: 10px;
 }
 
 .TiposServicios header p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 40px;
 }
 
 /* Diseño de los servicios */
 .servicios {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 3 columnas */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Mejor responsividad */
+    gap: 25px;
     justify-items: center;
 }
 
 /* Cada servicio como una tarjeta */
 .servicio {
     background-color: #13202c;
-    padding: 20px;
+    padding: 30px 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 320px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #1D1F34;
+}
+.servicio:hover {
+    transform: translateY(-5px);
+    border: 1px solid #00B28A;
 }
 
 .servicio img.icono-servicio {
-    width: 60px;
-    height: 60px;
+    width: 100%; /* Ajuste al 100% de la tarjeta */
+    max-height: 150px;
+    object-fit: cover;
     margin-bottom: 15px;
+    border-radius: 5px;
 }
 
 .servicio h3 {
-    font-size: 1.8rem;
-    color: #333;
+    font-size: 1.5rem;
+    color: #f4f4f4;
     margin-bottom: 10px;
 }
 
 .servicio p {
-    font-size: 1.1rem;
-    color: #555;
+    color: #ccc;
     margin-bottom: 15px;
 }
 
 .servicio ul {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 15px;
-}
-
-.servicio ul li {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-.servicio .precio {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #007bff;
     margin-bottom: 20px;
 }
 
+.servicio ul li {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 5px;
+    text-align: left;
+    padding-left: 20px;
+    position: relative;
+}
+.servicio ul li::before {
+    content: "•";
+    color: #00B28A;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.servicio .precio {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #6f42c1;
+    margin-bottom: 25px;
+}
+
 .servicio .btn {
-    padding: 10px 20px;
-    background-color: #7a5fff;
+    padding: 10px 25px;
+    background-color: #00B28A; /* Color principal */
     color: white;
-    text-decoration: none;
+    font-weight: bold;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
 .servicio .btn:hover {
-    background-color: #6f42c1;
+    background-color: #009a7d;
 }
 
-/* Responsividad */
-@media (max-width: 1024px) {
-    .servicios {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
-    }
+/* ===================== Sección de información adicional (Footer-like) =========================== */
+.info-adicional {
+    background-color: #1D1F34;
+    padding: 40px 20px;
 }
 
-@media (max-width: 768px) {
-    .servicios {
-        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
-    }
-}
-
-/* Sección de contacto */
 .contenedorContactos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    padding: 40px;
-    background-color: #1D1F34;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste a 250px min */
+    gap: 30px;
 }
 
-.contactoEyesBlender h3 {
-    font-size: 1.6rem;
-    color: #7a5fff;
-    margin-bottom: 10px;
+.contactoEyesBlender h3,
+.contactoServicios h4,
+.contacto h4,
+.newsletter h4 {
+    font-size: 1.4rem;
+    color: #00B28A;
+    margin-bottom: 15px;
 }
 
 .contactoEyesBlender p {
     font-size: 1rem;
-    color: #f4f4f4;
-    margin-bottom: 15px;
+    color: #ccc;
 }
 
-.social-media {
-    margin-top: 20px;
-}
-
-.social-icon {
-    margin-right: 15px;
-    text-decoration: none;
-    font-size: 1rem;
-    color: #3498db;
-}
-
-.social-icon:hover {
-    text-decoration: underline;
-}
-
-/* Sección de servicios */
-.contactoServicios h4 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: #7a5fff;
-}
-
-.servicios-links {
-    list-style: none;
-}
-
-.servicios-links li {
-    margin-bottom: 10px;
+.servicios-links li,
+.contactos li {
+    margin-bottom: 8px;
+    color: #ccc;
 }
 
 .servicios-links a {
-    text-decoration: none;
-    color: #f4f4f4;
     transition: color 0.3s ease;
 }
 
 .servicios-links a:hover {
-    color: #7a5fff;
+    color: #6f42c1;
 }
 
-/* Sección de empresa */
-.contacto h4 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: #7a5fff;
-}
-
-.empresa-links {
-    list-style: none;
-}
-
-.empresa-links li {
-    margin-bottom: 10px;
-}
-
-.empresa-links a {
-    text-decoration: none;
-    color: #f4f4f4;
-    transition: color 0.3s ease;
-}
-
-.empresa-links a:hover {
-    color: #7a5fff;
-}
-
-/* Sección de contacto */
-.contactos {
-    list-style: none;
-}
-
-.contactos li {
-    margin-bottom: 10px;
-}
-
-.contactos a {
-    text-decoration: none;
-    color: #7a5fff;
-}
-
-.contactos a:hover {
-    text-decoration: underline;
+.contactos .contactanos {
+    color: #ccc;
 }
 
 /* Sección de newsletter */
-.newsletter h4 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: #7a5fff;
-}
-
-.newsletter p {
-    color: #f4f4f4;
-    margin-bottom: 15px;
-}
-
 .suscripcion {
     display: flex;
     gap: 10px;
+    margin-top: 15px;
 }
 
 .suscripcion input {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: none;
+    background-color: #080D14;
+    color: white;
     flex-grow: 1;
 }
 
 .suscripcion button {
-    background-color: #7a5fff;
+    background-color: #6f42c1;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .suscripcion button:hover {
-    background-color: #6f42c1;
+    background-color: #5c35a8;
+}
+
+/* Estilo general para footer */
+footer {
+    text-align: center;
+    background-color: #080D14;
+    padding: 20px;
+    color: #ccc;
+    font-size: 0.9rem;
+    border-top: 1px solid #13202c;
+}
+
+/* ========================== RESPONSIVIDAD =============================*/
+@media (max-width: 900px) {
+    .presentacion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contenido {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .imagen {
+        max-width: 100%;
+    }
+
+    .botones {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mostrar el botón de hamburguesa */
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    /* Ocultar la navegación y botones principales */
+    #nav-menu, .buttons {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Ajustar basado en la altura del header */
+        right: 0;
+        width: 100%;
+        background-color: #1D1F34;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Menú ACTIVO (al hacer click en la hamburguesa) */
+    #nav-menu.activo {
+        display: flex;
+    }
+
+    nav ul.moversePorLaPagina {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul.moversePorLaPagina li {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    nav ul.moversePorLaPagina li a {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid #333;
+    }
+
+    .header-container {
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    .diseños3D, .TiposServicios {
+        padding: 40px 10px;
+    }
+
+    .botonesTipoDiseños {
+        justify-content: flex-start;
+    }
+
+    .info .calificacion span {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .servicios {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+    }
+
+    .contenedorContactos {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        /* Puedes decidir si mostrar los botones del header en el menú o no */
+        display: none;
+    }
 }
