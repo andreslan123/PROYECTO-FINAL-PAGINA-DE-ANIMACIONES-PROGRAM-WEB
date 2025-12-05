@@ -1,26 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texturizado y Materiales</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diseños 3D</title>
+    <link rel="stylesheet" href="EstiloModelo 3D.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <section class="gallery">
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="Logos/Eyes_in_Blender-removebg-preview.png" alt="Logo de Eyes in Blender" />
+            </div>
 
-    <article class="card">
-        <figure class="card-image"></figure>
-        <header class="card-body">
-            <span class="tag"></span>
-            <h3 class="title" aria-hidden="true"></h3>
+            <button class="menu-hamburguesa" aria-label="Abrir menú de navegación">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="nav-menu">
+                <ul class="moversePorLaPagina">
+                    <li><a href="ProyectoFinal.html">Inicio</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#pedido-compra">Comprar</a></li> <li><a href="Contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="buttons">
+                <a href="#" class="button presupuesto">Presupuesto</a>
+                <a href="#pedido-compra" class="button comenzar">Comenzar</a> </div>
+        </div>
+    </header>
+
+    <section class="TiposServicios" id="servicios" aria-labelledby="servicios-title">
+        <header>
+            <h2 id="servicios-title">Diseños 3D</h2>
+            <p>Selecciona el servicio que deseas adquirir o contáctanos para un presupuesto personalizado.</p>
         </header>
-        <footer class="card-footer">
-            <span class="likes"></span>
-            <span class="views"></span>
-        </footer>
-    </article>
+        
+        <section class="servicios" aria-label="Listado de servicios">
+            <article class="servicio">
+                <img src="Animacion3D/animacion.jpg" alt="Modelado 3D" class="icono-servicio" />
+                <h3>Modelado 3D</h3>
+                <p class="precio">350 bs</p>
+                <a href="#pedido-compra" class="btn">Comprar</a>
+            </article>
 
-</section>
+            <article class="servicio">
+                <img src="Animacion3D/animacion1.jpg" alt="Texturizado y Materiales" class="icono-servicio" />
+                <h3>Texturizado y Materiales</h3>
+                <p class="precio">200 bs</p>
+                <a href="#pedido-compra" class="btn">Comprar</a>
+            </article>
 
-</body>
+            <article class="servicio">
+                <img src="Animacion3D/animacion2.jpg" alt="Iluminación y Renderizado" class="icono-servicio" />
+                <h3>Iluminación y Renderizado</h3>
+                <p class="precio">200 bs</p>
+                <a href="#pedido-compra" class="btn">Comprar</a>
+            </article>
+
+            <article class="servicio">
+                <img src="Animacion3D/animacion3.jpg" alt="Animación 3D" class="icono-servicio" />
+                <h3>Animación 3D</h3>
+                <p class="precio">300 bs</p>
+                <a href="#pedido-compra" class="btn">Comprar</a>
+            </article>
+
+            <article class="servicio">
+                <img src="Animacion3D/animacion4.jpg" alt="Visualización Arquitectónica" class="icono-servicio" />
+                <h3>Visualización Arquitectónica</h3>
+                <p class="precio">200 bs</p>
+                <a href="#pedido-compra" class="btn">Comprar</a>
+            </article>
+
+            <article class="servicio">
+                <img src="Animacion3D/animacion5.png" alt="Producción Audiovisual" class="icono-servicio" />
+                <h3>Producción Audiovisual</h3>
+                <p class="precio">500 bs</p>
+                <a href="#pedido-compra" class="btn">Comprar</a>
+            </article>
+        </section>
+    </section>
+
+    <hr>
+
+    <section class="pedido-compra" id="pedido-compra" aria-labelledby="pedido-title">
+        <div class="contenedor-pedido">
+            <header class="header-pedido">
+                <h2 id="pedido-title">Solicita tu Diseño 3D o Presupuesto</h2>
+                <p>Cuéntanos sobre tu proyecto y te enviaremos una cotización detallada en menos de 24 horas.</p>
+            </header>
+
+            <form class="formulario-pedido">
+                <div class="grupo-input">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="grupo-input">
+                    <label for="servicio-select">Servicio de Interés:</label>
+                    <select id="servicio-select" name="servicio" required>
+                        <option value="" disabled selected>Selecciona un servicio</option>
+                        <option value="modelado">Modelado 3D (350 bs)</option>
+                        <option value="texturizado">Texturizado y Materiales (200 bs)</option>
+                        <option value="iluminacion">Iluminación y Renderizado (200 bs)</option>
+                        <option value="animacion">Animación 3D (300 bs)</option>
+                        <option value="arquitectura">Visualización Arquitectónica (200 bs)</option>
+                        <option value="audiovisual">Producción Audiovisual (500 bs)</option>
+                        <option value="personalizado">Otro / Presupuesto Personalizado</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input full-width">
+                    <label for="detalles">Detalles del Proyecto (Máximo 500 caracteres):</label>
+                    <textarea id="detalles" name="detalles" rows="5" maxlength="500" required placeholder="Describe tu idea, referencias, y la fecha de entrega deseada."></textarea>
+                </div>
+
+                <button type="submit" class="button btn-enviar">Enviar Solicitud</button>
+            </form>
+            
+            <aside class="garantia">
+                <p><i class="fas fa-shield-alt"></i> **Garantía de Satisfacción:** Revisión gratuita hasta que el diseño cumpla tus expectativas.</p>
+                <p><i class="fas fa-clock"></i> **Respuesta Rápida:** Recibe tu presupuesto en menos de 24 horas.</p>
+            </aside>
+        </div>
+    </section>
+    <hr>
+
+    <aside class="info-adicional">
+        <div class="contenedorContactos">
+            <div class="contactoEyesBlender" id="contenedor1">
+                <h3>Eyes in Blender</h3>
+                <p>Especialistas en diseño 3D con Blender. Transformamos ideas en
+                    experiencias visuales impactantes para proyectos únicos.</p>
+            </div>
+            <div class="contactoServicios" id="contenedor2">
+                <h4>Nuestros Servicios</h4>
+                <ul class="servicios-links">
+                    <li><a href="#servicios">Modelado 3D</a></li>
+                    <li><a href="#servicios">Texturizado</a></li>
+                    <li><a href="#servicios">Renderizado</a></li>
+                    <li><a href="#servicios">Visualizacion</a></li>
+                    <li><a href="#servicios">VFX</a></li>
+                </ul>
+            </div>
+            <div class="contacto" id="contenedor3">
+                <h4>Contactos</h4>
+                <ul class="contactos">
+                    <li class="contactanos">andressanticla@gmail.com</li>
+                    <li class="contactanos">+591 69912569</li>
+                    <li class="contactanos">La Paz - Bolivia</li>
+                </ul>
+            </div>
+            <div class="newsletter" id="contenedor4">
+                <h4>Newsletter</h4>
+                <div class="suscripcion">
+                    <input type="email" name="tuEmail" id="tuEmail" placeholder="Tu Email">
+                    <button>Suscribir</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        <p>&copy; 2025 BlenderStudio. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="funcionalidadAnimacion3D.js"></script> </body>
 </html>

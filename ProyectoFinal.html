@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- parte de arriba -->
     <header>
         <div class="header-container">
             <div class="logo">
@@ -26,16 +25,20 @@
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="Contactos.html">Contactos</a></li>
                 </ul>
+                
+                <div class="buttons buttons-mobile">
+                    <a href="#" class="button presupuesto">Presupuesto</a>
+                    <a href="#" class="button comenzar">Comenzar</a>
+                </div>
             </nav>
 
-            <div class="buttons">
+            <div class="buttons buttons-desktop">
                 <a href="#" class="button presupuesto">Presupuesto</a>
                 <a href="#" class="button comenzar">Comenzar</a>
             </div>
         </div>
     </header>
 
-     <!-- lo mas buscado en diseños -->
     <main>
         <section class="presentacion" aria-label="Presentación principal">
             <article class="contenido">
@@ -65,7 +68,6 @@
     </main>
 
     <hr>
-    <!-- parte de diseños 3D -->
     <section class="diseños3D" id="galeria" aria-labelledby="galeria-title">
         <header class="img3D">
             <h2 id="galeria-title">Galería de Diseños 3D</h2>
@@ -119,7 +121,6 @@
 
     <hr>
 
-     <!-- parte de servicios -->
     <section class="TiposServicios" id="servicios" aria-labelledby="servicios-title">
         <header>
             <h2 id="servicios-title">Servicios Profesionales de Blender</h2>
@@ -129,7 +130,6 @@
             </p>
         </header>
         
-        <!-- servicio modelado 3D -->
         <section class="servicios" aria-label="Listado de servicios">
             <article class="servicio">
                 <img src="modelado3D/modelos3D.jpg" alt="Modelado 3D" class="icono-servicio" />
@@ -145,7 +145,6 @@
                 <a href="servicioModelos3D.html" class="btn">Solicitar Servicio →</a>
             </article>
 
-            <!-- servicio texturizado y materiales -->
             <article class="servicio">
                 <img src="modelado3D/texturizado.jpg" alt="Texturizado y Materiales" class="icono-servicio" />
                 <h3>Texturizado y Materiales</h3>
@@ -160,7 +159,6 @@
                 <a href="servicioTexturizadoMaterial.html" class="btn">Solicitar Servicio →</a>
             </article>
 
-            <!-- servicio iluminacion y renderizado -->
             <article class="servicio">
                 <img src="modelado3D/render.jpg" alt="Iluminación y Renderizado" class="icono-servicio" />
                 <h3>Iluminación y Renderizado</h3>
@@ -175,7 +173,6 @@
                 <a href="servicioIluminacion.html" class="btn">Solicitar Servicio →</a>
             </article>
 
-            <!-- servicio animacion 3D -->
             <article class="servicio">
                 <img src="modelado3D/animacion3D.jpg" alt="Animación 3D" class="icono-servicio" />
                 <h3>Animación 3D</h3>
@@ -190,7 +187,6 @@
                 <a href="servicioAnimacion.html" class="btn">Solicitar Servicio →</a>
             </article>
 
-            <!-- servicio visualizacion Arquitectura -->
             <article class="servicio">
                 <img src="modelado3D/arquitectura.jpg" alt="Visualización Arquitectónica" class="icono-servicio" />
                 <h3>Visualización Arquitectónica</h3>
@@ -205,7 +201,6 @@
                 <a href="servicioVisualizacion.html" class="btn">Solicitar Servicio →</a>
             </article>
 
-            <!-- servicio Produccion Audiocisual -->
             <article class="servicio">
                 <img src="modelado3D/ProduccionAudioVisual.jpg" alt="Producción Audiovisual" class="icono-servicio" />
                 <h3>Producción Audiovisual</h3>
@@ -224,7 +219,6 @@
 
     <hr>
 
-    <!-- Contactos -->
     <aside class="info-adicional">
         <div class="contenedorContactos">
             <div class="contactoEyesBlender" id="contenedor1">
@@ -264,6 +258,6 @@
         <p>&copy; 2025 BlenderStudio. Todos los derechos reservados.</p>
     </footer>
 
-    <a href="funcionalidad.js"></a>
+    <script src="funcionalidad.js"></script>
 </body>
 </html>
