@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Producción Audiovisual</title>
-    <link rel="stylesheet" href="Estilos.css" />
+    <link rel="stylesheet" href="CSS/ProduccionAudio.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- parte de arriba -->
-    <header>
+    <header class="botonesCabeza">
         <div class="header-container">
             <div class="logo">
                 <img src="Logos/Eyes_in_Blender-removebg-preview.png" alt="Logo de Eyes in Blender" />
@@ -24,116 +23,162 @@
                     <li><a href="ProyectoFinal.html">Inicio</a></li>
                     <li><a href="#galeria">Galería</a></li>
                     <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#pedido-compra">Comprar</a></li> 
                     <li><a href="Contactos.html">Contactos</a></li>
+                    <li><button id="open-cart-btn" class="carrito-icon-btn"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</button></li>
                 </ul>
             </nav>
-
-            <div class="buttons">
-                <a href="#" class="button presupuesto">Presupuesto</a>
-                <a href="#" class="button comenzar">Comenzar</a>
-            </div>
         </div>
     </header>
 
-     <!-- Diseños 3D -->
     <section class="TiposServicios" id="servicios" aria-labelledby="servicios-title">
-        <header>
-            <h2 id="servicios-title">Diseños 3D</h2>
-        </header>
+        <div class="titulo">
+            <h2 id="servicios-title">Producción Audiovisual</h2>
+            <p>Selecciona el servicio que deseas adquirir o contáctanos para un presupuesto y personalizado.</p>
+        </div>
+      
         
         <section class="servicios" aria-label="Listado de servicios">
-            <article class="servicio">
+            
+            <article class="servicio" data-id="S001" data-nombre="Modelado 3D" data-precio="350">
                 <img src="Animacion3D/animacion.jpg" alt="Modelado 3D" class="icono-servicio" />
                 <h3>Modelado 3D</h3>
-                <p>Creación de modelos 3D detallados y realistas para cualquier proyecto.</p>
                 <p class="precio">350 bs</p>
-                <a href="servicioModelos3D.html" class="btn">Solicitar Servicio →</a>
+                <button class="btn add-to-cart-btn">Añadir al Carrito</button>
             </article>
 
-            <article class="servicio">
+            <article class="servicio" data-id="S002" data-nombre="Texturizado y Materiales" data-precio="200">
                 <img src="Animacion3D/animacion1.jpg" alt="Texturizado y Materiales" class="icono-servicio" />
                 <h3>Texturizado y Materiales</h3>
-                <p>Aplicación de texturas y materiales PBR para lograr realismos impresionantes.</p>
                 <p class="precio">200 bs</p>
-                <a href="servicioTexturizadoMaterial.html" class="btn">Solicitar Servicio →</a>
+                <button class="btn add-to-cart-btn">Añadir al Carrito</button>
             </article>
 
-            <article class="servicio">
+            <article class="servicio" data-id="S003" data-nombre="Iluminación y Renderizado" data-precio="200">
                 <img src="Animacion3D/animacion2.jpg" alt="Iluminación y Renderizado" class="icono-servicio" />
                 <h3>Iluminación y Renderizado</h3>
-                <p>Configuración profesional de luces y renderizado de alta calidad.</p>
                 <p class="precio">200 bs</p>
-                <a href="servicioIluminacion.html" class="btn">Solicitar Servicio →</a>
+                <button class="btn add-to-cart-btn">Añadir al Carrito</button>
             </article>
 
-            <article class="servicio">
+            <article class="servicio" data-id="S004" data-nombre="Animación 3D" data-precio="300">
                 <img src="Animacion3D/animacion3.jpg" alt="Animación 3D" class="icono-servicio" />
                 <h3>Animación 3D</h3>
-                <p>Animaciones fluidas y expresivas que dan vida a tus personajes y objetos.</p>
                 <p class="precio">300 bs</p>
-                <a href="servicioAnimacion.html" class="btn">Solicitar Servicio →</a>
+                <button class="btn add-to-cart-btn">Añadir al Carrito</button>
             </article>
 
-            <article class="servicio">
+            <article class="servicio" data-id="S005" data-nombre="Visualización Arquitectónica" data-precio="200">
                 <img src="Animacion3D/animacion4.jpg" alt="Visualización Arquitectónica" class="icono-servicio" />
                 <h3>Visualización Arquitectónica</h3>
-                <p>Renders fotorrealistas para proyectos arquitectónicos e interiorismo.</p>
                 <p class="precio">200 bs</p>
-                <a href="servicioVisualizacion.html" class="btn">Solicitar Servicio →</a>
+                <button class="btn add-to-cart-btn">Añadir al Carrito</button>
             </article>
 
-            <article class="servicio">
+            <article class="servicio" data-id="S006" data-nombre="Producción Audiovisual" data-precio="500">
                 <img src="Animacion3D/animacion5.png" alt="Producción Audiovisual" class="icono-servicio" />
                 <h3>Producción Audiovisual</h3>
-                <p>Elementos 3D para spots publicitarios, videos musicales y cortometrajes.</p>
                 <p class="precio">500 bs</p>
-                <a href="servicioProduccion.html" class="btn">Solicitar Servicio →</a>
+                <button class="btn add-to-cart-btn">Añadir al Carrito</button>
             </article>
         </section>
     </section>
 
     <hr>
 
-    <!-- Contactos -->
-    <aside class="info-adicional">
-        <div class="contenedorContactos">
-            <div class="contactoEyesBlender" id="contenedor1">
-                <h3>Eyes in Blender</h3>
-                <p>Especialistas en diseño 3D con Blender. Transformamos ideas en
-                    experiencias visuales impactantes para proyectos únicos.</p>
+    <section class="pedido-compra" id="pedido-compra" aria-labelledby="pedido-title">
+        <header class="header-pedido">
+            <h2 id="pedido-title">🛒 Finalizar Pedido y Solicitud de Servicio</h2>
+            <p>Completa tus datos de contacto y revisa los servicios añadidos en el carrito para proceder con tu solicitud.</p>
+        </header>
+    
+        <form class="formulario-pedido">
+            <div class="grupo-input">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
             </div>
-            <div class="contactoServicios" id="contenedor2">
-                <h4>Nuestros Servicios</h4>
-                <ul class="servicios-links">
-                    <li><a href="#servicios">Modelado 3D</a></li>
-                    <li><a href="#servicios">Texturizado</a></li>
-                    <li><a href="#servicios">Renderizado</a></li>
-                    <li><a href="#servicios">Visualizacion</a></li>
-                    <li><a href="#servicios">VFX</a></li>
-                </ul>
+            <div class="grupo-input">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="contacto@ejemplo.com" required>
             </div>
-            <div class="contacto" id="contenedor3">
-                <h4>Contactos</h4>
-                <ul class="contactos">
-                    <li class="contactanos">andressanticla@gmail.com</li>
-                    <li class="contactanos">+591 69912569</li>
-                    <li class="contactanos">La Paz - Bolivia</li>
-                </ul>
+            
+            <div class="grupo-input">
+                <label for="servicio-pedido">Servicio Seleccionado (Principal)</label>
+                <select id="servicio-pedido" name="servicio-pedido" required>
+                    <option value="" disabled selected>Selecciona un tipo de servicio</option>
+                    <option value="S001">Modelado 3D</option>
+                    <option value="S002">Texturizado y Materiales</option>
+                    <option value="S003">Iluminación y Renderizado</option>
+                    <option value="S004">Animación 3D</option>
+                    <option value="S005">Visualización Arquitectónica</option>
+                    <option value="S006">Producción Audiovisual</option>
+                    <option value="Personalizado">Presupuesto Personalizado</option>
+                </select>
+                <small>Si has añadido varios servicios, especifica el principal. Los demás se consideran en los detalles.</small>
             </div>
-            <div class="newsletter" id="contenedor4">
-                <h4>Newsletter</h4>
-                <div class="suscripcion">
-                    <input type="email" name="tuEmail" id="tuEmail" placeholder="Tu Email">
-                    <button>Suscribir</button>
-                </div>
+            <div class="grupo-input">
+                <label for="presupuesto-estimado">Presupuesto Estimado (bs)</label>
+                <input type="number" id="presupuesto-estimado" name="presupuesto-estimado" value="0" min="0" readonly>
+                <small>Basado en los ítems de tu carrito. Lo confirmaremos después.</small>
             </div>
+
+            <div class="grupo-input full-width">
+                <label for="detalles">Detalles de tu Proyecto y Requerimientos</label>
+                <textarea id="detalles" name="detalles" rows="6" placeholder="Describe tu proyecto, el plazo de entrega deseado y cualquier referencia visual."></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Solicitud y Contacto</button>
+            
+            <div class="garantia full-width">
+                <p><i class="fas fa-shield-alt"></i> Te responderemos en menos de 24 horas con un presupuesto formal y cronograma.</p>
+            </div>
+        </form>
+    </section>
+    <hr>
+
+    <aside id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <button id="close-cart-btn" class="close-btn">&times;</button>
+            <h3><i class="fas fa-shopping-cart"></i> Carrito de Compras</h3>
+            <ul id="cart-items">
+                <li class="empty-cart-message">Tu carrito está vacío.</li>
+            </ul>
+            <div class="cart-summary">
+                <p>Subtotal: <span id="cart-subtotal">0.00</span> bs</p>
+                <p class="total-line"><strong>Total: <span id="cart-total">0.00</span> bs</strong></p>
+            </div>
+            <button id="checkout-btn" class="btn checkout-btn" disabled>Proceder al Pago</button>
+            <button id="clear-cart-btn" class="btn clear-cart-btn" disabled>Vaciar Carrito</button>
         </div>
+    </aside>
+    <aside class="info-adicional">
     </aside>
 
     <footer>
         <p>&copy; 2025 BlenderStudio. Todos los derechos reservados.</p>
     </footer>
 
-    <a href="funcionalidadAnimacion3D.js"></a>
+    <script src="JS/funcionalidadAnimacion3D.js"></script>
+    <script src="JS/carrito.js"></script> 
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuHamburguesa = document.querySelector('.menu-hamburguesa');
+            const navMenu = document.getElementById('nav-menu');
+
+            menuHamburguesa.addEventListener('click', () => {
+                navMenu.classList.toggle('activo');
+            });
+
+            // Cierra el menú al hacer clic en un enlace (útil en móvil)
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu.classList.contains('activo')) {
+                        navMenu.classList.remove('activo');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

@@ -23,12 +23,12 @@ function guardarCarrito() {
 // 1. Añadir producto al carrito
 function agregarProducto(e) {
     if (e.target.classList.contains('add-to-cart-btn')) {
-        // Obtener el artículo padre para acceder a los data-attributes
         const servicioArticle = e.target.closest('.servicio');
         
         const productoInfo = {
             id: servicioArticle.dataset.id,
             nombre: servicioArticle.dataset.nombre,
+            // Aseguramos que el precio sea un número flotante
             precio: parseFloat(servicioArticle.dataset.precio),
             cantidad: 1,
         };
@@ -45,8 +45,6 @@ function agregarProducto(e) {
 
         guardarCarrito();
         actualizarCarritoHTML();
-        // Mostrar una notificación de que se ha agregado (opcional)
-        // alert(`"${productoInfo.nombre}" añadido al carrito.`);
     }
 }
 
@@ -114,15 +112,20 @@ function actualizarCarritoHTML() {
 
     // Actualizar los totales y el contador de ítems
     cartSubtotalSpan.textContent = subtotal.toFixed(2);
-    // Asumimos que no hay impuestos o envío, así que Total = Subtotal
     cartTotalSpan.textContent = subtotal.toFixed(2); 
     cartCountSpan.textContent = totalItems;
+
+    // Actualizar el valor del input de presupuesto en el formulario de pedido
+    const presupuestoInput = document.getElementById('presupuesto-estimado');
+    if (presupuestoInput) {
+        presupuestoInput.value = subtotal.toFixed(2);
+    }
 }
 
 // 5. Función de Pago
 function procederAlPago() {
     if (carrito.length > 0) {
-        // Aquí podrías redirigir al usuario al formulario de pedido/pago
+        // Mostrar alerta de confirmación
         alert(`Total a pagar: ${cartTotalSpan.textContent} bs. Redirigiendo al formulario de contacto/pago...`);
         cartModal.classList.remove('open');
         // Redirigir a la sección de formulario
