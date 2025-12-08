@@ -32,14 +32,14 @@ header {
     background-color: #1D1F34;
     padding: 20px 0; /* Padding vertical, el horizontal lo maneja header-container */
     position: sticky; /* Sticky header para mejor usabilidad */
-    top: 0;
-    z-index: 1000;
+    top: 0;/*distancia de la parte superior de la pantalla*/
+    z-index: 1000;/*Define la “altura” visual de un elemento en el eje Z*/
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex;/*acomodar, alinear y distribuir */
+    justify-content: space-between;/*separar los elementos dejando el máximo espacio posible entre ellos.*/
+    align-items: center;/*centrar los elementos verticalmente, si esta dentro de un display: flex*/
     max-width: 1200px; /* Ajuste para coincidir con el body */
     margin: 0 auto;
     padding: 0 20px;
@@ -58,11 +58,11 @@ nav ul.moversePorLaPagina {
 
 nav ul.moversePorLaPagina li a {
     color: #f4f4f4;
-    font-size: 1rem;
+    font-size: 1rem;/*es una unidad que se escala según el tamaño base del HTML.*/
     font-weight: bold;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
+    transition: color 0.3s ease, border-bottom 0.3s ease;/*animaciones suaves cuando cambian ciertas propiedades del elemento.*/
     padding-bottom: 5px; /* Para que el borde no esté pegado al texto */
-    border-bottom: 2px solid transparent;
+    border-bottom: 2px solid transparent;/*crear un borde inferior invisible*/
 }
 
 nav ul.moversePorLaPagina li a:hover {
@@ -83,7 +83,6 @@ nav ul.moversePorLaPagina li a:hover {
 .buttons-desktop {
     display: flex;
 }
-
 
 .button {
     padding: 10px 20px;

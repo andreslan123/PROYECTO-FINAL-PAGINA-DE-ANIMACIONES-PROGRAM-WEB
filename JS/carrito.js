@@ -1,8 +1,8 @@
 // Arreglo para almacenar los productos en el carrito
-let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];/*sirve para recuperar datos guardados en el navegador y asegurarse de que haya un arreglo listo para usar.*/
 
 // --- Elementos del DOM del Carrito ---
-const openCartBtn = document.getElementById('open-cart-btn');
+const openCartBtn = document.getElementById('open-cart-btn');/*seleccionar un elemento del HTML y guardarlo en una variable de JavaScript*/
 const closeCartBtn = document.getElementById('close-cart-btn');
 const cartModal = document.getElementById('cart-modal');
 const cartItemsContainer = document.getElementById('cart-items');
@@ -17,12 +17,12 @@ const serviciosContainer = document.querySelector('.servicios');
 
 // Guarda el carrito en el almacenamiento local del navegador
 function guardarCarrito() {
-    localStorage.setItem('carrito', JSON.stringify(carrito));
+    localStorage.setItem('carrito', JSON.stringify(carrito));/*sirve para guardar datos en el navegador de forma que se conserven aunque el usuario cierre la página o el navegador */
 }
 
 // 1. Añadir producto al carrito
 function agregarProducto(e) {
-    if (e.target.classList.contains('add-to-cart-btn')) {
+    if (e.target.classList.contains('add-to-cart-btn')) {//para verificar si el elemento que se hizo clic tiene una clase específica.
         const servicioArticle = e.target.closest('.servicio');
         
         const productoInfo = {
