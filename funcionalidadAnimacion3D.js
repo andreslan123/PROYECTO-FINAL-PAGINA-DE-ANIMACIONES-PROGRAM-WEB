@@ -24,7 +24,4 @@ document.addEventListener('DOMContentLoaded', () => {
             icon.classList.add('fa-bars');
         }
     });
-
-    
-
 });
