@@ -17,12 +17,12 @@ main, .diseños3D, .TiposServicios, .info-adicional {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none; /*sirve para que subrayado de enlaces(marca de enlaces)  */
     color: inherit;
 }
 
 ul {
-    list-style: none;
+    list-style: none;/*sirve para quitar los estilos predestinandos de las listas*/
     padding: 0;
     margin: 0;
 }
