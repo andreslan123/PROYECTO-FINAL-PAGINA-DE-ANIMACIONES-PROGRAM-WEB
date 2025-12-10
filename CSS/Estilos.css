@@ -91,7 +91,7 @@ nav ul.moversePorLaPagina li a:hover {
     font-weight: 600;
     text-decoration: none;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /*crear una animación suave cuando cambia el color de fondo ease(aceleracion)*/
     white-space: nowrap; /* Evita que el texto del botón se rompa */
 }
 
@@ -111,7 +111,7 @@ nav ul.moversePorLaPagina li a:hover {
 .menu-hamburguesa {
     display: none; /* Ocultar por defecto en escritorio */
     background: none;
-    border: none;
+    border: none;/*Quita bordes visibles (solidos, punteados, dobles, etc.)*/
     color: white;
     font-size: 1.8rem;
     cursor: pointer;
@@ -195,7 +195,7 @@ h1 {
 
 /* ============================ Estilos para la galería 3D ============================ */
 .diseños3D {
-    padding: 60px 20px;
+    padding: 60px 20px; /*espacio interno del contenedor*/
 }
 
 .img3D {

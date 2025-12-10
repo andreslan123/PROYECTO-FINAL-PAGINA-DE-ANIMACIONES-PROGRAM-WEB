@@ -3,8 +3,8 @@ let carrito = JSON.parse(localStorage.getItem('carrito')) || [];/*sirve para rec
 
 // --- Elementos del DOM del Carrito ---
 const openCartBtn = document.getElementById('open-cart-btn');/*seleccionar un elemento del HTML y guardarlo en una variable de JavaScript*/
-const closeCartBtn = document.getElementById('close-cart-btn');/*close-cart-btn Es el ID del elemento HTML que el código está buscando.*/
-const cartModal = document.getElementById('cart-modal'); /*e utiliza para buscar un elemento específico en el HTML*/
+const closeCartBtn = document.getElementById('close-cart-btn');
+const cartModal = document.getElementById('cart-modal');
 const cartItemsContainer = document.getElementById('cart-items');
 const cartTotalSpan = document.getElementById('cart-total');
 const cartSubtotalSpan = document.getElementById('cart-subtotal');
@@ -111,8 +111,8 @@ function actualizarCarritoHTML() {
     }
 
     // Actualizar los totales y el contador de ítems
-    cartSubtotalSpan.textContent = subtotal.toFixed(2);/*cartSubtotalSpan (El Destino) */
-    cartTotalSpan.textContent = subtotal.toFixed(2); /*.textContent (La Propiedad de Escritura)*/
+    cartSubtotalSpan.textContent = subtotal.toFixed(2);
+    cartTotalSpan.textContent = subtotal.toFixed(2); 
     cartCountSpan.textContent = totalItems;
 
     // Actualizar el valor del input de presupuesto en el formulario de pedido

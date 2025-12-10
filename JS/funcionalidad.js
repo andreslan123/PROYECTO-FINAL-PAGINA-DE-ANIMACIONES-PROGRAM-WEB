@@ -125,8 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    
     // 4. ANIMACIÓN DE SCROLL (Scroll Suave)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

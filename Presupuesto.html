@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-- Indica que el documento está usando HTML5 -->
+
+<html lang="es">
+<!-- Define que el idioma principal de la página es español -->
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- Permite usar caracteres especiales como tildes y ñ -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Hace que la página sea responsive en celulares -->
+
+    <title>Presupuesto</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <link rel="stylesheet" href="CSS/VisualizacionArc.css" />
+    <!-- Enlaza el archivo CSS principal donde están los estilos -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Importa iconos de FontAwesome (para el ícono del menú y escudo) -->
+</head>
+
+<body>
+
+    <!-- =================== HEADER =================== -->
+    <header class="botonesCabeza">
+        <!-- Contiene la parte superior de la página -->
+
+        <div class="header-container">
+            <!-- Contenedor general del logo y navegación -->
+
+            <div class="logo">
+                <!-- Área donde se muestra el logo -->
+                <img src="Logos/Eyes_in_Blender-removebg-preview.png" alt="Logo de Eyes in Blender" />
+            </div>
+
+            <button class="menu-hamburguesa" aria-label="Abrir menú de navegación">
+                <!-- Botón del menú hamburguesa para móviles -->
+                <i class="fas fa-bars"></i> <!-- Ícono de barras -->
+            </button>
+
+            <nav id="nav-menu">
+                <!-- Menú de navegación principal -->
+                <ul class="moversePorLaPagina">
+                    <!-- Lista de enlaces del menú -->
+                    <li><a href="ProyectoFinal.html">Inicio</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#pedido-compra">Solicitud</a></li>
+                    <li><a href="Contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- =================== FORMULARIO =================== -->
+    <section class="pedido-compra" id="pedido-compra" aria-labelledby="pedido-title">
+        <!-- Contenedor del formulario de solicitud -->
+
+        <header class="header-pedido" id="Presupuestoo">
+            <!-- Encabezado del formulario -->
+            <h2 id="pedido-title">📋 Solicitud de Presupuesto Personalizado</h2>
+            <p>Completa tus datos de contacto, especifica el servicio que necesitas y si tienes un presupuesto aproximado.</p>
+        </header>
+
+        <form class="formulario-pedido" id="formulario-compra">
+            <!-- Formulario donde el usuario ingresa datos -->
+
+            <div class="grupo-input">
+                <!-- Grupo de campo: Nombre -->
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+
+            <div class="grupo-input">
+                <!-- Campo de correo -->
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="contacto@ejemplo.com" required>
+            </div>
+
+            <div class="grupo-input">
+                <!-- Seleccionar tipo de servicio -->
+                <label for="servicio-pedido">Servicio Seleccionado (Principal)</label>
+                <select id="servicio-pedido" name="servicio-pedido" required>
+                    <option value="" disabled selected>Selecciona un tipo de servicio</option>
+                    <option value="S001">Modelado 3D</option>
+                    <option value="S002">Texturizado y Materiales</option>
+                    <option value="S003">Iluminación y Renderizado</option>
+                    <option value="S004">Animación 3D</option>
+                    <option value="S005">Visualización Arquitectónica</option>
+                    <option value="S006">Producción Audiovisual</option>
+                    <option value="Personalizado">Presupuesto Personalizado</option>
+                </select>
+                <small>Si no estás seguro, selecciona 'Presupuesto Personalizado'.</small>
+            </div>
+
+            <div class="grupo-input">
+                <!-- Campo de presupuesto sugerido -->
+                <label for="presupuesto-estimado">Monto de Presupuesto Sugerido (bs)</label>
+                <input type="number" id="presupuesto-estimado" name="presupuesto-estimado" value="0" min="0">
+                <small>Indica el monto aproximado. (Opcional)</small>
+            </div>
+
+            <div class="grupo-input full-width">
+                <!-- Área grande de texto -->
+                <label for="detalles">Detalles de tu Proyecto y Requerimientos</label>
+                <textarea id="detalles" name="detalles" rows="6" placeholder="Describe tu proyecto, el plazo de entrega deseado y cualquier referencia visual."></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">
+                <!-- Botón para enviar el formulario -->
+                Enviar Solicitud y Contacto
+            </button>
+
+            <div class="garantia full-width">
+                <!-- Mensaje adicional -->
+                <p><i class="fas fa-shield-alt"></i> Te responderemos en menos de 24 horas con un presupuesto formal y cronograma.</p>
+            </div>
+        </form>
+    </section>
+
+    <hr>
+    <!-- Línea divisoria -->
+
+    <aside class="info-adicional">
+        <!-- Sección para información extra (vacía por ahora) -->
+    </aside>
+
+    <footer>
+        <!-- Pie de página -->
+        <p>&copy; 2025 BlenderStudio. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- =================== SCRIPTS =================== -->
+
+    <script src="JS/funcionalidadAnimacion3D.js"></script>
+    <!-- Archivo JS externo con funciones adicionales -->
+
+    <script src="funcionalidadEleccion.js"></script>
+    <!-- Otro archivo JS para opciones del formulario -->
+
+    <script>
+        /* Script interno para abrir y cerrar el menú hamburguesa */
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ejecuta el código cuando el HTML ya está cargado
+
+            const menuHamburguesa = document.querySelector('.menu-hamburguesa');
+            // Selecciona el botón del menú
+
+            const navMenu = document.getElementById('nav-menu');
+            // Selecciona el menú de navegación
+
+            menuHamburguesa.addEventListener('click', () => {
+                // Abre o cierra el menú al presionar el botón
+                navMenu.classList.toggle('activo');
+            });
+
+            // Cierra el menú al hacer clic en un enlace (muy útil en móviles)
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu.classList.contains('activo')) {
+                        navMenu.classList.remove('activo');
+                    }
+                });
+            });
+        });
+        
+    </script>
+
+</body>
+</html>
